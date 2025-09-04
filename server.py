@@ -125,7 +125,7 @@ def main():
         mcp = create_server(args)
         if mcp:
             # Start the server with stdio transport (matching Go version)
-            mcp.run(transport="stdio")
+            mcp.run(transport="streamable-http")
         else:
             logger.error("Failed to initialize MCP server")
             sys.exit(1)
